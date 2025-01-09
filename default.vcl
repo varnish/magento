@@ -156,6 +156,7 @@ sub vcl_recv {
     urlplus.query_delete("sms_click");
     urlplus.query_delete("sms_source");
     urlplus.query_delete("sms_uph");
+    urlplus.query_delete("stsltid");
     urlplus.query_delete("toolid");
     urlplus.query_delete("trk_contact");
     urlplus.query_delete("trk_module");
