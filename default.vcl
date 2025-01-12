@@ -76,7 +76,6 @@ sub vcl_recv {
     # Remove all marketing get parameters to minimize the cache objects
     # You can add additional parameters that occur in your setup
     urlplus.query_delete("_branch_match_id");
-    urlplus.query_delete("srsltid");
     urlplus.query_delete("_bta_c");
     urlplus.query_delete("_bta_tid");
     urlplus.query_delete("_ga");
@@ -156,7 +155,7 @@ sub vcl_recv {
     urlplus.query_delete("sms_click");
     urlplus.query_delete("sms_source");
     urlplus.query_delete("sms_uph");
-    urlplus.query_delete("stsltid");
+    urlplus.query_delete("srsltid");
     urlplus.query_delete("toolid");
     urlplus.query_delete("trk_contact");
     urlplus.query_delete("trk_module");
@@ -173,6 +172,7 @@ sub vcl_recv {
     urlplus.query_delete("utm_source");
     urlplus.query_delete("utm_source_platform");
     urlplus.query_delete("utm_term");
+    urlplus.query_delete("vmcid");
     urlplus.query_delete("wbraid");
     urlplus.query_delete("yclid");
     urlplus.query_delete("zanpid");
