@@ -296,8 +296,8 @@ sub vcl_backend_response {
     # Associate every object with the "all" key, for when a full cache purge takes place
     ykey.add_key("all");
 
-	# Serve stale content for three days after object expiration
-	# Perform asynchronous revalidation while stale content is served
+    # Serve stale content for three days after object expiration
+    # Perform asynchronous revalidation while stale content is served
     set beresp.grace = 3d;
 
     # All text-based content can be parsed as ESI
