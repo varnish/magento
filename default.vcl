@@ -249,7 +249,7 @@ sub vcl_recv {
     }
 
     # Collapse multiple cookie headers into one
-    std.collect(req.http.Cookie);
+    std.collect(req.http.Cookie, ";");
 
     # Static files caching
     if (req.url ~ "^/(pub/)?(media|static)/") {
